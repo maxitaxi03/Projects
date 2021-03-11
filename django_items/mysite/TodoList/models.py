@@ -10,5 +10,5 @@ class List(models.Model):
         return self.list_item
 
 class MainList(models.Model):
-    list_main = models.CharField(max_length=200)
+    list = models.CharField(max_length=200)
     author = models.ForeignKey(User, on_delete=models.CASCADE)

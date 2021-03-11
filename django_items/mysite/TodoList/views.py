@@ -10,4 +10,6 @@ def todo(request):
     context = {
         'lists': List.objects.all()
     }
+    print(request.GET)
+    print(request.POST)
     return render(request, "list/index.html")

@@ -21,13 +21,15 @@
       <h2 class="task-list-title">My lists</h2>
       <ul class="task-list" data-lists></ul>
 
-      <form action="" data-new-list-form>
+      <form action="" method="POST" data-new-list-form>
+        {% csrf_token %}
         <input 
           type="text"
           class="new list"
           data-new-list-input
           placeholder="new list name"
           aria-label="new list name"
+          name="list"
         />
         <button class="btn create" aria-label="create new list">+</button>
       </form>
@@ -44,12 +46,14 @@
 
         <div class="new-task-creator">
             <form action="" data-new-task-form>
+              {% csrf_token %}
                 <input 
                   type="text"
                   data-new-task-input
                   class="new task"
                   placeholder="Insert Task"
                   aria-label="new task name"
+                  name="list_item"
                 />
                 <button class="btn create" aria-label="create new task">+</button>
               </form>
