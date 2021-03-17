@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+    <main>
+        {% block content %}
+        <div class="user_data_container">
+        <form action="" method="POST"new-user-data-form>
+            {% csrf_token %}
+            <input 
+            type="text"
+                new-user-data-form
+                class="first_name"
+                placeholder="Enter First Name"
+                aria-label="Name"
+
+            />
+            <input 
+            type="text"
+                new-user-data-form
+                class="last_name"
+                placeholder="Enter Last Name"
+                aria-label="Name"
+            />
+            <input 
+            type="email"
+                new-user-data-form
+                class="email"
+                placeholder="Enter email"
+                aria-label="Email"
+
+            />
+            <input 
+            type="password"
+                new-user-data-form
+                class="pword"
+                placeholder="Enter Secure Password"
+                aria-label="Password"
+            />
+            {{ form }}
+        </form>
+    </div>
+        {% endblock %}
+    </main>
+</body>
+</html>
